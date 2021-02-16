@@ -1,8 +1,9 @@
 <section>
 <form class="form-container">
     <h1>TODO List</h1>
+    <p class="descriptive-paragraph">A place to store your todos</p>
 <form class="form" #filterForm="ngForm" (input)="setSearchTerm(filterForm)">
-    <label for="term">A place to store your todos</label>
+    <!-- <label for="term">A place to store your todos</label> -->
     <input type="text" id="term" name="term" placeholder="Filter your to-dos" ngModel>
 </form>
 <ol class="ordered-list">

@@ -44,7 +44,7 @@ todos: Todo[] = [
 addTodo = (form: NgForm): void => {
   let newTodo: Todo = {
     task: form.form.value.task,
-    completed: form.form.value.completed === "yes"
+    completed: false
   }
   this.todos.push(newTodo)
 }
@@ -59,8 +59,9 @@ setSearchTerm = (form: NgForm) => {
 
 filterTodos = (term: string): Todo[] => {
   return this.todos.filter((item) => {
-    let currentItem = item.task.toLowerCase().trim()
-    return currentItem.includes(term.toLowerCase().trim())
+    // let currentItem = item.task.toLowerCase().trim()
+    // return currentItem.includes(term.toLowerCase().trim())
+    return item.task.includes(term.toLowerCase().trim())
   })
 }
 

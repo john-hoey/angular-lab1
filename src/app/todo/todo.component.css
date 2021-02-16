@@ -13,15 +13,22 @@
 }
 h1 {
     margin: 10px;
+    font-size:xx-large;
 }
+
+.descriptive-paragraph {
+    margin: -5px 0px 0px 15px;
+}
+
 .form {
     display: flex;
     flex-direction: column;
     margin: 10px;
 }
-label {
+/* label {
     margin-left: 5px;
-}
+} */
+
 
 .ordered-list {
     padding-left: 10px;
@@ -73,11 +80,12 @@ input {
 .add-form {
     display: flex;
     flex-direction: column;
+    margin: 10px 10px 0px 10px;
 }
 .add-button {
     color: white;
     background-color: #ff1493;
-    margin: 10px;
+    margin: 5px 0px 10px 5px;
     border: 0;
     padding: 10px;
     border-radius: 2px;
