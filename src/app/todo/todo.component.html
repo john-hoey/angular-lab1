@@ -1,0 +1,22 @@
+<section>
+<form class="form-container">
+    <h1>TODO List</h1>
+<form class="form" #filterForm="ngForm" (input)="setSearchTerm(filterForm)">
+    <label for="term">A place to store your todos</label>
+    <input type="text" id="term" name="term" placeholder="Filter your to-dos" ngModel>
+</form>
+<ol class="ordered-list">
+    <li class="list-item" *ngFor="let todo of filterTodos(searchTerm); index as i">
+        <div class="flex-container-list">
+        <button class="complete-button" *ngIf="todo.completed === !true" (click)="setComplete(todo)">Complete</button>
+        <p [ngClass]="{strikethrough: todo.completed}">{{todo.task}}</p>
+        <button class="delete-button" (click)="deleteTodo(i)">X</button>
+        </div>
+    </li>
+</ol>
+<form class="add-form" #addForm="ngForm" (ngSubmit)="addTodo(addForm)">
+<input type="text" id="task" name="task" placeholder="Add your to-do" ngModel>
+<button class="add-button">Add</button>
+</form>
+</form>
+</section>
